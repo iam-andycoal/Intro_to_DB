@@ -6,7 +6,6 @@ CREATE TABLE Authors (
     author_name VARCHAR(215) NOT NULL
 );
 
--- Create Books table
 CREATE TABLE Books (
     book_id INT AUTO_INCREMENT PRIMARY KEY,
     title VARCHAR(130) NOT NULL,
@@ -37,4 +36,5 @@ CREATE TABLE Order_Details (
     quantity DOUBLE NOT NULL,
     FOREIGN KEY (order_id) REFERENCES Orders(order_id),
     FOREIGN KEY (book_id) REFERENCES Books(book_id)
+
 );
